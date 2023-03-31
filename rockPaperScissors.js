@@ -32,12 +32,29 @@ function playRound(playerSelection, computerSelection) {
     // console.log(stringToNumber(normalizedPlayerSelection))
     if(stringToNumber(normalizedPlayerSelection) == stringToNumber(computerSelection)){
         return "Round is a Tie"
-    }else if(stringToNumber(normalizedPlayerSelection) == stringToNumber(computerSelection)){
-        
+    }else if(stringToNumber(normalizedPlayerSelection) == ROCK){
+        if(stringToNumber(computerSelection) == PAPER){
+            return "You Lose! Paper beats Rock"
+        }else{
+            return "You Win! Rock beats Scissors"
+        }
+    }else if(stringToNumber(normalizedPlayerSelection) == PAPER){
+        if(stringToNumber(computerSelection) == SCISSORS){
+            return "You Lose! Scissors beats Paper"
+        }else{
+            return "You Win! Paper beats Rock"
+        }
+    }else if(stringToNumber(normalizedPlayerSelection) == SCISSORS){
+        if(stringToNumber(computerSelection) == ROCK){
+            return "You Lose! Rock beats Scissors"
+        }else{
+            return "You Win! Scissors beats Paper"
+        }
     }
 }
    
 
 const playerSelection = "PapeR";
 const computerSelection = getComputerChoice();
+console.log(playerSelection, computerSelection);
 console.log(playRound(playerSelection, computerSelection));
