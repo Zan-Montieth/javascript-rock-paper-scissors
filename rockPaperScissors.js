@@ -52,9 +52,35 @@ function playRound(playerSelection, computerSelection) {
         }
     }
 }
-   
 
-const playerSelection = "PapeR";
-const computerSelection = getComputerChoice();
-console.log(playerSelection, computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function game(){
+    for(i=0;i<5;i++){
+        let gameResult = playRound(prompt("choose Rock, Paper, or Scissors: "), getComputerChoice());
+        if(gameResult[4] == "W"){
+            playerScore++
+        }
+        if(gameResult[4] == "L"){
+            computerScore++
+        }
+        console.log(gameResult)
+    }
+    if(playerScore < computerScore){
+        console.log("computer wins the game!")
+    }
+    if(playerScore > computerScore){
+        console.log("player wins the game!")
+    }
+    if(playerScore == computerScore){
+        console.log("game ends in a draw")
+    }
+    return
+}
+
+
+let playerScore = 0;
+let computerScore = 0;
+game();
+// const playerSelection = "PapeR";
+// const computerSelection = getComputerChoice();
+// console.log(playerSelection, computerSelection);
+// console.log(playRound(playerSelection, computerSelection));
