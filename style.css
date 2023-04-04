@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    justify-content: stretch;
+    height: 100%;
+}
+
+img {
+    width: 80%;
+}
+
+.results {
+    flex-grow: 2;
+    display: flex;
+    justify-content: stretch;
+    flex-basis: 63%;
+}
+
+.humanChoice,
+.computerChoice {
+    /* background-color: aqua; */
+    flex-grow: 1;
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .computerChoice{
+    background-color: blue;
+} */
+
+h1 {
+    visibility: hidden;
+}
+
+.winner {
+    flex-basis: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.playerOptions {
+    background-color: lightgrey;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-basis: 29%;
+}
+
+button {
+    width: 12%;
+    height: 60px;
+    border: 4px black solid;
+    border-radius: 6px;
+}

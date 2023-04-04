@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Rock Paper Scissors</title>
-    <script src="rockPaperScissors.js"></script>   
-</head>
-<body>
-    <h1>Check Browser Console To Play</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript Rock Paper Scissors</title>
+        <script src="rockPaperScissors.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="results">
+            <div class="humanChoice">
+                <h1 class="humanHeader">You Chose:</h1>
+                <img class="humanChoiceImg" />
+                <div class="humanScore"></div>
+            </div>
+            <div class="computerChoice">
+                <h1 class="computerHeader">The Computer Chose:</h1>
+                <img class="computerChoiceImg" />
+                <div class="computerScore"></div>
+            </div>
+        </div>
+        <div class="winner"></div>
+        <div class="playerOptions">
+            <button class="userOption" id="Rock">Rock</button>
+            <button class="userOption" id="Paper">Paper</button>
+            <button class="userOption" id="Scissors">Scissors</button>
+        </div>
+        <script>
+            addEventListener("load", onStart());
+        </script>
+    </body>
 </html>
